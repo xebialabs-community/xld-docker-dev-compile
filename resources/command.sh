@@ -1,13 +1,17 @@
 #!/usr/bin/env sh
 
-cd /data/
+mkdir /build
+cp -r /data/* /build
+
+cd /build/
 ./gradlew clean copyDownloadResources
 
 # Copy downloads into 'plugins'
-if [ -d "/data/build/downloads/plugins" ]; then
-    cp /data/build/downloads/plugins/* /opt/xld/server/plugins
+if [ -d "/build/build/downloads/plugins" ]; then
+    cp /build/build/downloads/plugins/* /opt/xld/server/plugins
 fi
 
 # Compile plugin
-cd /data/
+cd /build/
 ./gradlew test assemble -PxlDeployHome=/opt/xld/server
+cp -rf /build/build/. /data/build
