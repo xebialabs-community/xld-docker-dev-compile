@@ -1,4 +1,4 @@
-FROM xebialabs/xl-docker-demo-xld:v7.2.0.1
+FROM xebialabs/xl-docker-demo-xld:v7.5.0.1
 
 MAINTAINER XebiaLabs <info@xebialabs.com>
 ENV REFRESHED_AT 2017-10-03
