@@ -1,7 +1,7 @@
-FROM xebialabs/xl-docker-demo-xld:v7.5.0.1
+FROM xebialabs/xl-docker-demo-xld:v7.6.0.1
 
 MAINTAINER XebiaLabs <info@xebialabs.com>
-ENV REFRESHED_AT 2017-10-03
+ENV REFRESHED_AT 2018-03-19
 
 RUN apk --update add openjdk8 bash libstdc++
 ADD resources/command.sh /opt/xld/command.sh
