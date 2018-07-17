@@ -1,9 +1,8 @@
-FROM xebialabs/xl-docker-demo-xld:v8.0.0.1
+ARG xld_tag
+FROM xebialabs/xl-docker-demo-xld:$xld_tag
 
 MAINTAINER XebiaLabs <info@xebialabs.com>
-ENV REFRESHED_AT 2018-05-23
 
-RUN apk --update add openjdk8 bash libstdc++
 ADD resources/command.sh /opt/xld/command.sh
 VOLUME /data
 VOLUME /root/.gradle

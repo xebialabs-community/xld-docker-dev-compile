@@ -3,15 +3,18 @@
 Docker image that has XLD installed, mounts your source code and executes compilation using gradle wrapper.
 
 ## Badges ##
-[![Docker Stars](https://img.shields.io/docker/stars/xebialabs/xld_dev_compile.svg)]()
-[![Docker Pulls](https://img.shields.io/docker/pulls/xebialabs/xld_dev_compile.svg)]()
-[![Docker Automated buil](https://img.shields.io/docker/automated/xebialabs/xld_dev_compile.svg)]()
-[![Docker Build Statu](https://img.shields.io/docker/build/xebialabs/xld_dev_compile.svg)]()
+[![Docker Stars](https://img.shields.io/docker/stars/xebialabsunsupported/xld_dev_compile.svg)]()
+[![Docker Pulls](https://img.shields.io/docker/pulls/xebialaxebialabsunsupportedbs/xld_dev_compile.svg)]()
+[![Build Status][xld-docker-dev-compile-travis-image] ][xld-docker-dev-compile-travis-url]
+
+[xld-docker-dev-compile-travis-image]: https://travis-ci.org/xebialabs-community/xld-docker-dev-compile.svg?branch=master
+[xld-docker-dev-compile-travis-url]: https://travis-ci.org/xebialabs-community/xld-docker-dev-compile
 
 
-## Supported tags ##
+## Tags ##
 
-+ `latest`, `v8.0.0.1`
++ `latest`, `8.1.0`
++ `v8.0.0.1`
 + `v7.6.0.1`
 + `v7.5.0.1`
 + `v7.2.0.1`
@@ -19,19 +22,11 @@ Docker image that has XLD installed, mounts your source code and executes compil
 + `v7.1.0.2`
 + `v7.1.0.1`
 + `v7.0.0.2`
-+ `v6.2.1.1`
-+ `v6.2.0.1`
-+ `v6.0.2.1`
-+ `v6.0.1.1`
-+ `v6.0.0.1`
-+ `v5.5.5.6`
-+ `5.5.3.1`
-+ `5.5.1.1`
 
 ## Starting ##
 
 ```
-docker run -v ~/myproject:/data -v ~/.xlgradle:/root/.gradle xebialabs/xld_dev_compile
+docker run -v ~/myproject:/data -v ~/.xlgradle:/root/.gradle xebialabsunsupported/xld_dev_compile
 ```
 
 where:
