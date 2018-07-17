@@ -1,5 +1,5 @@
 ARG xld_tag
-FROM xebialabs/xl-docker-demo-xld:$xld_tag
+FROM xebialabs/xl-deploy:$xld_tag
 
 MAINTAINER XebiaLabs <info@xebialabs.com>
 
