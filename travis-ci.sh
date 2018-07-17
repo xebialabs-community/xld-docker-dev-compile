@@ -4,10 +4,10 @@ http --follow https://gist.githubusercontent.com/jdewinne/3f13494858fad8b6b2b88e
 chmod +x dockertags
 
 image_name="xebialabsunsupported/xld_dev_compile"
-./dockertags xebialabs/xl-deploy > /tmp/xld
-./dockertags $image_name > /tmp/xl
+./dockertags -i xebialabs/xl-deploy > /tmp/xld
+./dockertags -i $image_name > /tmp/xl
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 while read tag ; do
     docker build -t $image_name:$tag --build-arg xld_tag=$tag .
-    docker push $image_name:$tag
+    # docker push $image_name:$tag
 done < <(comm -23 <(sort /tmp/xld) <(sort /tmp/xl))
