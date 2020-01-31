@@ -16,10 +16,10 @@ image_name="xebialabsunsupported/xld_dev_compile"
 ./dockertags -i $image_name > /tmp/xl
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 while read tag ; do
-    docker build -t $image_name:$tag --build-arg xlr_tag=$tag .
+    docker build -t $image_name:$tag --build-arg xld_tag=$tag .
     echo "####################################################################"
     echo "####        $image_name:$tag built"
     docker push $image_name:$tag
     echo "####        $image_name:$tag pushed"
     echo "####################################################################"
-done < <(comm -23 <(sort /tmp/xlr) <(sort /tmp/xl))
+done < <(comm -23 <(sort /tmp/xld) <(sort /tmp/xl))
