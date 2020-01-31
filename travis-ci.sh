@@ -12,7 +12,7 @@ http --follow https://gist.githubusercontent.com/jdewinne/3f13494858fad8b6b2b88e
 chmod +x dockertags
 
 image_name="xebialabsunsupported/xld_dev_compile"
-./dockertags -i xebialabs/xl-deploy -e "centos$" > /tmp/xld
+./dockertags -i xebialabsunsupported/xl-deploy -e "centos$" > /tmp/xld
 ./dockertags -i $image_name > /tmp/xl
 echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 while read tag ; do
